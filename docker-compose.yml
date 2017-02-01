@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build: ./docker/app
+    container_name: app
+    ports:
+      - 80:80
+    volumes:
+      - .:/app
+    command: php -S 0.0.0.0:80 -t /app
